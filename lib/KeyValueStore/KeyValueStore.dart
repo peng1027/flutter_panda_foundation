@@ -10,18 +10,18 @@ import 'dart:core';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class KeyValueStore {
-  factory KeyValueStore() => _getInstance();
-  static KeyValueStore get instance => _getInstance();
-  static KeyValueStore _instance;
-
-  KeyValueStore._internal();
-
-  static KeyValueStore _getInstance() {
-    if (_instance == null) {
-      _instance = new KeyValueStore._internal();
-    }
-    return _instance;
-  }
+//  factory KeyValueStore() => _getInstance();
+//  static KeyValueStore get instance => _getInstance();
+//  static KeyValueStore _instance;
+//
+//  KeyValueStore._internal();
+//
+//  static KeyValueStore _getInstance() {
+//    if (_instance == null) {
+//      _instance = new KeyValueStore._internal();
+//    }
+//    return _instance;
+//  }
 
   void synchronize() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -118,6 +118,10 @@ class KeyValueStore {
     return this.objectForKey(key);
   }
 
+  operator []=(String key, dynamic value) {
+    this.setObjectForKey(value, key);
+  }
+
   void setObjectForKey(dynamic value, String key) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     if (value is int) {
@@ -148,14 +152,11 @@ class KeyValueStore {
   }
 
   static String get _isBiometricEnabled => "FFSUserDefaultKeyEnableTouchId";
-  static String get _isBiometricRequested =>
-      "FFSUserDefaultKeyRequestedBiometricId";
+  static String get _isBiometricRequested => "FFSUserDefaultKeyRequestedBiometricId";
 
   bool isBiometricEnabled() => this[KeyValueStore._isBiometricEnabled];
-  void setIsBiometricEnabled(bool enable) =>
-      this.setBoolForKey(enable, KeyValueStore._isBiometricEnabled);
+  void setIsBiometricEnabled(bool enable) => this.setBoolForKey(enable, KeyValueStore._isBiometricEnabled);
 
   bool isBiometricRequested() => this[KeyValueStore._isBiometricRequested];
-  void setIsBiometricRequested(bool enable) =>
-      this.setBoolForKey(enable, KeyValueStore._isBiometricRequested);
+  void setIsBiometricRequested(bool enable) => this.setBoolForKey(enable, KeyValueStore._isBiometricRequested);
 }

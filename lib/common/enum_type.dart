@@ -10,11 +10,15 @@ class EnumType<T, V> {
   final T typeValue;
   final V rawValue;
 
-  EnumType({this.typeValue, this.rawValue});
+  const EnumType({this.typeValue, this.rawValue});
+
+  operator ==(EnumType<T, V> other) => (this.typeValue == other.typeValue && this.rawValue == other.rawValue);
 }
 
 class EnumValue<V> {
   final V rawValue;
 
-  EnumValue({this.rawValue});
+  const EnumValue({this.rawValue});
+
+  operator ==(EnumValue<V> other) => this.rawValue == other.rawValue;
 }

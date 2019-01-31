@@ -6,15 +6,12 @@
  * Copyright (c) 2019. Farfetch. All rights reserved.
  */
 
-import 'package:flutter_test/flutter_test.dart';
-
-import '../lib/utils/device_info.dart';
+import 'utils/date_formatter_utils.dart';
+import 'utils/device_info.dart';
+import 'utils/strings.dart';
 
 void main() {
-  test("Device info testing...", () {
-    expect(DeviceInfo.isAppleDevice(), true);
-    expect(DeviceInfo.isIosDevice(), false);
-    expect(DeviceInfo.isMacOSDevice(), true);
-    expect(DeviceInfo.isAndroidDevice(), false);
-  });
+  testDeviceInfo();
+  testStringsPadding();
+  testDateFormatter();
 }
