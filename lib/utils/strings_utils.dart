@@ -1,3 +1,12 @@
+/*
+ * strings_utils.dart
+ * flutter_panda_foundation
+ *
+ * Developed by zhudelun on 2/8/19 1:49 AM.
+ * Copyright (c) 2019 by Farfetch. All rights reserved.
+ *
+ */
+
 String stringsPadding(String source, int toLength, String component, int startIndex) {
   if (source.length > toLength) {
     return source.substring(0, toLength);

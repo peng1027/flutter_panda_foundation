@@ -2,8 +2,9 @@
  * flutter_panda_foundation.dart
  * flutter_panda_foundation
  *
- * Developed by zhudelun on 1/30/19 4:43 AM
- * Copyright (c) 2019. Farfetch. All rights reserved.
+ * Developed by zhudelun on 2/8/19 1:49 AM.
+ * Copyright (c) 2019 by Farfetch. All rights reserved.
+ *
  */
 
 library flutter_panda_foundation;

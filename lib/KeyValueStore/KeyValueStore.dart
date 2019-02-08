@@ -2,27 +2,15 @@
  * KeyValueStore.dart
  * flutter_panda_foundation
  *
- * Developed by zhudelun on 1/29/19 10:12 PM
- * Copyright (c) 2019. Farfetch. All rights reserved.
+ * Developed by zhudelun on 2/8/19 1:49 AM.
+ * Copyright (c) 2019 by Farfetch. All rights reserved.
+ *
  */
 
 import 'dart:core';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class KeyValueStore {
-//  factory KeyValueStore() => _getInstance();
-//  static KeyValueStore get instance => _getInstance();
-//  static KeyValueStore _instance;
-//
-//  KeyValueStore._internal();
-//
-//  static KeyValueStore _getInstance() {
-//    if (_instance == null) {
-//      _instance = new KeyValueStore._internal();
-//    }
-//    return _instance;
-//  }
-
   void synchronize() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.commit();
