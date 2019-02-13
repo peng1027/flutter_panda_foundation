@@ -11,6 +11,7 @@ library flutter_panda_foundation;
 
 export 'KeyValueStore/KeyValueStore.dart';
 export 'common/enum_type.dart';
+export 'common/error_type.dart';
 export 'constants/constant_api.dart';
 export 'constants/constant_border_radius.dart';
 export 'constants/constant_colors.dart';
@@ -26,3 +27,5 @@ export 'utils/image_in_assets.dart';
 export 'utils/keyboard_utils.dart';
 export 'utils/uuid_utils.dart';
 export 'utils/strings_utils.dart';
+export 'utils/map_utils.dart';
+export 'key_chain/key_chain.dart';
